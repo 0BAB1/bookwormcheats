@@ -35,13 +35,15 @@ lines = wordlist.read().splitlines()
 print("file loaded")
 
 while True:
+    #mainloop
     valid_words = []
     request = input("entrez vos lettres, les unes a la suite des autres sans separateur : \n ---> ")
     request = request.lower() #tout en minuscules
-    print("... recherche de mots ...")
+    print(" \n \n ... recherche de mots ...")
     for word in lines:
         if IsValid(word, request):
             valid_words.append(word)
+
     #phase de tri du plus grand au plus petit
     higherLen = 0
     bestWords = []
