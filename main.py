@@ -42,8 +42,18 @@ while True:
     for word in lines:
         if IsValid(word, request):
             valid_words.append(word)
-
-    print("mots valides : " + str(valid_words))
+    #phase de tri du plus grand au plus petit
+    higherLen = 0
+    bestWords = []
+    for word in valid_words:
+        if len(word) > higherLen:
+            bestWords = []
+            bestWords.append(word)
+            higherLen = len(word)
+        elif len(word) == higherLen:
+            bestWords.append(word)
+    
+    print("\n meilleurs mot avec " + str(len(bestWords[0])) + " caractères : \n \n" + str(bestWords))
 
 
 print("bye")
