@@ -28,16 +28,16 @@ def IsValid(word,request):
 
 #open file and load it
 wordlist = open("wordlist.txt", "r")
-print("file successfuly opened ! initializing ...")
+print("\n \nfichier overt avec success, chargement...")
 
 #charger les lignes et les traiter
 lines = wordlist.read().splitlines()
-print("file loaded")
+print("fichier chargé !")
 
 while True:
     #mainloop
     valid_words = []
-    request = input("entrez vos lettres, les unes a la suite des autres sans separateur : \n ---> ")
+    request = input("\n \n ==================================== \nentrez vos lettres, les unes a la suite des autres sans separateur : \n ---> ")
     request = request.lower() #tout en minuscules
     print(" \n \n ... recherche de mots ...")
     for word in lines:
